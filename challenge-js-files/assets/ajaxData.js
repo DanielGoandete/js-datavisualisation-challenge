@@ -17,21 +17,19 @@ let chart1 = () => {
         data: {
             labels: label,
             datasets: [{
-                label: ["Crime Statistics"],
+                label: ["Crime Statistics' Chart"],
                 borderColor: "red",
                 data: dataPoints,
-            }],
-            borderWidth: 1,
-            borderColor: '#777',
-            hoverBorderWidth: 3,
-            hoverBorderColor: '#000'
-
+            }]
         }
     })
+
     // Update and ajax
     function updateGraph() {
         i++;
         label.push(i);
+
+
         fetch('https://canvasjs.com/services/data/datapoints.php')
             .then(response => {
                 return response.json()
@@ -42,7 +40,7 @@ let chart1 = () => {
                 chart.update();
             })
     };
-    setInterval(updateGraph, 1000);
+    setInterval(updateGraph, 2500);
 }
 
 chart1();
