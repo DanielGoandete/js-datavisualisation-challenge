@@ -1,4 +1,4 @@
-() => {
+window.onload = () => {
     async function getData() {
         const response = await fetch("https://canvasjs.com/services/data/datapoints.php");
 
@@ -12,4 +12,15 @@
     }
 
     getData()
+
+        .then(data => {
+            document.getElementById("data").innerHTML = data;
+
+
+            console.log(data)
+        })
+        .catch(error => {
+            error.message;
+        });
+
 }
