@@ -1,14 +1,14 @@
-Chart.defaults.global.defaultFontFamily = 'lato';
-Chart.defaults.global.defaultFontSize = 18;
-Chart.defaults.global.defaultFontColor = 'black';
-let graphOne = () => {
-    let canv = document.createElement("canvas");
-    canv.setAttribute('id', 'canvas');
-    canv.setAttribute("height", "300");
-    canv.setAttribute("width", "600");
-    document.getElementById("firstHeading").appendChild(canv);
+Chart.defaults.global.defaultFontSize = 16;
+Chart.defaults.global.defaultFontColor = "#000";
 
-    let canvas = document.getElementById('canvas').getContext('2d');
+let chart1 = () => {
+    let canvas1 = document.createElement("canvas");
+    canvas1.setAttribute("id", "canvas");
+    canvas1.setAttribute("height", "300");
+    canvas1.setAttribute("width", "600");
+    document.getElementById("firstHeading").appendChild(canvas1);
+
+    let canvas = document.getElementById("canvas").getContext("2d");
     let dataPoints = [];
     let label = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     let i = 9;
@@ -33,10 +33,10 @@ let graphOne = () => {
         i++;
         label.push(i);
         fetch('https://canvasjs.com/services/data/datapoints.php')
-            .then(function (response) {
+            .then(response => {
                 return response.json()
             })
-            .then(function (data) {
+            .then(data => {
                 dataPoints.length + 1;
                 data.forEach(element => dataPoints.push(parseInt(element[1])));
                 chart.update();
@@ -45,4 +45,4 @@ let graphOne = () => {
     setInterval(updateGraph, 1000);
 }
 
-graphOne();
+chart1();
