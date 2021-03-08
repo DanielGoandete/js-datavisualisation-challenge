@@ -7,24 +7,21 @@ let graphOne = () => {
     canv.setAttribute('id', 'canvas');
     canv.setAttribute("height", "300");
     canv.setAttribute("width", "600");
-    document.getElementById("container").appendChild(canv);
+    document.getElementById("firstHeading").appendChild(canv);
     
     let canvas = document.getElementById('canvas').getContext('2d');
     let dataPoints = [];
     let label =[1,2,3,4,5,6,7,8,9]
     let i=9;
     let chart = new Chart(canvas,{
-        type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data : {
             labels : label,
             datasets: [{
                 label : ["Crime Statistics"],
-                borderColor : "blue",
+                borderColor : "red",
                 data : dataPoints,
             }],
-            backgroundColor:[
-                'red','blue','green','yellow'
-            ],
             borderWidth:1,
             borderColor:'#777',
             hoverBorderWidth:3,
