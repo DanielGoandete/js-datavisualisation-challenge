@@ -14,10 +14,8 @@ window.onload = () => {
     getData()
 
         .then(data => {
-            document.getElementById("data").innerHTML = data;
-
-
-            console.log(data)
+            document.getElementById("data").innerHTML = Object.fromEntries(data);
+            console.log(Object.fromEntries(data));
         })
         .catch(error => {
             error.message;
