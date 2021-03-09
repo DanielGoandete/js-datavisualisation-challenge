@@ -82,7 +82,7 @@ for (let j = 1; j < table.length; j++) {
 
 
 
-let graphique1 = () => {
+let graphique2 = () => {
     let canvas2 = document.createElement("canvas");
     canvas2.setAttribute("id", "canvas2");
     canvas2.setAttribute("height", "300");
@@ -98,16 +98,94 @@ let graphique1 = () => {
         data: {
             labels: label,
             datasets: [{
+                label: Object.keys(data2)[0],
+                data: Object.values(data2)[0]
+            },
+            {
                 label: Object.keys(data2)[1],
-                data: Object.values(data2)[1],
-                borderColor: "red",
-            }]
+                data: Object.values(data2)[1]
+            },
+            {
+                label: Object.keys(data2)[2],
+                data: Object.values(data2)[2]
+            },
+            {
+                label: Object.keys(data2)[3],
+                data: Object.values(data2)[3]
+            },
+            {
+                label: Object.keys(data2)[4],
+                data: Object.values(data2)[4]
+            },
+            {
+                label: Object.keys(data2)[5],
+                data: Object.values(data2)[5]
+            },
+            {
+                label: Object.keys(data2)[6],
+                data: Object.values(data2)[6]
+            },
+            {
+                label: Object.keys(data2)[7],
+                data: Object.values(data2)[7]
+            },
+            {
+                label: Object.keys(data2)[8],
+                data: Object.values(data2)[8]
+            },
+            {
+                label: Object.keys(data2)[9],
+                data: Object.values(data2)[9]
+            },
+            {
+                label: Object.keys(data2)[10],
+                data: Object.values(data2)[10]
+            },
+            {
+                label: Object.keys(data2)[11],
+                data: Object.values(data2)[11]
+            },
+            {
+                label: Object.keys(data2)[12],
+                data: Object.values(data2)[12]
+            },
+            {
+                label: Object.keys(data2)[13],
+                data: Object.values(data2)[13]
+            },
+            {
+                label: Object.keys(data2)[14],
+                data: Object.values(data2)[14]
+            },
+            {
+                label: Object.keys(data2)[15],
+                data: Object.values(data2)[15]
+            },
+            {
+                label: Object.keys(data2)[16],
+                data: Object.values(data2)[16]
+            },
+            {
+                label: Object.keys(data2)[0],
+                data: Object.values(data2)[0]
+            },
+            {
+                label: Object.keys(data2)[0],
+                data: Object.values(data2)[0]
+            },
+            {
+                label: Object.keys(data2)[0],
+                data: Object.values(data2)[0]
+            }
+            ]
         }
     })
 }
-graphique1();
+graphique2();
 
-let graphique2 = () => {
+
+//Graphique n°3
+let graphique3 = () => {
     let canvas3 = document.createElement("canvas");
     canvas3.setAttribute("id", "canvas3");
     canvas3.setAttribute("height", "300");
@@ -123,6 +201,11 @@ let graphique2 = () => {
         data: {
             labels: label,
             datasets: [{
+                label: Object.keys(data3)[0],
+                data: Object.values(data3)[0],
+                borderColor: "red",
+            },
+            {
                 label: Object.keys(data2)[1],
                 data: Object.values(data2)[1],
                 borderColor: "red",
@@ -133,28 +216,163 @@ let graphique2 = () => {
                 borderColor: "red",
             },
             {
-                label: Object.keys(data2)[1],
-                data: Object.values(data2)[1],
+                label: Object.keys(data2)[3],
+                data: Object.values(data2)[3],
                 borderColor: "red",
             },
             {
-                label: Object.keys(data2)[1],
-                data: Object.values(data2)[1],
+                label: Object.keys(data2)[4],
+                data: Object.values(data2)[4],
                 borderColor: "red",
             },
             {
-                label: Object.keys(data2)[1],
-                data: Object.values(data2)[1],
+                label: Object.keys(data2)[5],
+                data: Object.values(data2)[5],
                 borderColor: "red",
             },
             {
-                label: Object.keys(data2)[1],
-                data: Object.values(data2)[1],
+                label: Object.keys(data2)[6],
+                data: Object.values(data2)[6],
                 borderColor: "red",
-            },]
+            },
+            {
+                label: Object.keys(data2)[7],
+                data: Object.values(data2)[7],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[8],
+                data: Object.values(data2)[8],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[9],
+                data: Object.values(data2)[9],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[10],
+                data: Object.values(data2)[10],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[11],
+                data: Object.values(data2)[11],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[12],
+                data: Object.values(data2)[12],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[13],
+                data: Object.values(data2)[13],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[14],
+                data: Object.values(data2)[14],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[15],
+                data: Object.values(data2)[15],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[16],
+                data: Object.values(data2)[16],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[17],
+                data: Object.values(data2)[17],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[18],
+                data: Object.values(data2)[18],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[19],
+                data: Object.values(data2)[19],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[20],
+                data: Object.values(data2)[20],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[21],
+                data: Object.values(data2)[21],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[22],
+                data: Object.values(data2)[22],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[23],
+                data: Object.values(data2)[23],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[24],
+                data: Object.values(data2)[24],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[25],
+                data: Object.values(data2)[25],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[26],
+                data: Object.values(data2)[26],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[27],
+                data: Object.values(data2)[27],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[28],
+                data: Object.values(data2)[28],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[29],
+                data: Object.values(data2)[29],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[30],
+                data: Object.values(data2)[30],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[31],
+                data: Object.values(data2)[31],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[32],
+                data: Object.values(data2)[32],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[33],
+                data: Object.values(data2)[33],
+                borderColor: "red",
+            }]
 
 
         }
     })
 }
-graphique2();
+graphique3();
