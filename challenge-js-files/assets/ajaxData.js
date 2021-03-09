@@ -72,7 +72,7 @@ tableToJSON();
 Table1
 Table2*/
 
-let table = document.getElementById("table1");
+/*let table = document.getElementById("table1");
 let trLength = table.getElementsByTagName("tr").length;
 let jsonData = [];
 let obj = {};
@@ -107,4 +107,47 @@ let htmlToJSON = function (index) {
 for (let i = 1; i < trLength; i++) {
     htmlToJSON(i);
 }
-console.log("html to JSON", jsonData);
+console.log("html to JSON", jsonData);*/
+
+
+function tableToJson(table) {
+    let data = [];
+    for (i = 1; i < table.rows.length; i++) {
+        let tableRow = table.rows[i];
+        let rowData = [];
+        for (j = 1; j < tableRow.cells.length; j++) {
+            rowData.push(tableRow.cells[j].innerHTML);
+        }
+        data.push(rowData);
+    }
+    return data;
+}
+let table1D = [];
+let table1 = document.getElementById("table1");
+table = tableToJson(table1);
+
+Array.from(table).forEach(element => {
+    let sum = 0;
+    for (let i = 1; i < element.length; i++) {
+        if (parseFloat(element[i])) {
+            sum += parseFloat(element[i]);
+        }
+
+    }
+    table1D.push([element[0], sum]);
+    console.log(element[0]);
+
+
+
+})
+const table2007_2009 = [];
+const table2010_2012 = [];
+let table2 = document.getElementById("table2");
+
+table2 = tableToJson(table2);
+Array.from(table2).forEach((element) => {
+    table2007_2009.push([element[0], element[2]]);
+    table2010_2012.push([element[0], element[1]]);
+
+})
+console.log(table2010_2012);
