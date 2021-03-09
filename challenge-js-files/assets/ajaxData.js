@@ -427,31 +427,6 @@ let graphique3 = () => {
                 label: Object.keys(data3)[28],
                 data: Object.values(data3)[28],
                 borderColor: "red",
-            },
-            {
-                label: Object.keys(data3)[29],
-                data: Object.values(data3)[29],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data3)[30],
-                data: Object.values(data3)[30],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data3)[31],
-                data: Object.values(data3)[31],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data3)[32],
-                data: Object.values(data3)[32],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data3)[33],
-                data: Object.values(data3)[33],
-                borderColor: "red",
             }]
 
         }
