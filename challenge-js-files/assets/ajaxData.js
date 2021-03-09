@@ -72,39 +72,39 @@ tableToJSON();
 Table1
 Table2*/
 
-let _table = document.getElementById("table1");
-let _trLength = _table.getElementsByTagName("tr").length;
-let _jsonData = [];
-let _obj = {};
+let table = document.getElementById("table1");
+let trLength = table.getElementsByTagName("tr").length;
+let jsonData = [];
+let obj = {};
 
-let _htmlToJSON = function (index) {
-    let _tr = _table.getElementsByTagName("tr")[index];
-    let _td = _tr.getElementsByTagName("td");
-    let _arr = [].map.call(_td, function (td) {
+let htmlToJSON = function (index) {
+    let tr = table.getElementsByTagName("tr")[index];
+    let td = tr.getElementsByTagName("td");
+    let arr = [].map.call(td, function (td) {
         return td.innerHTML;
     }).join(',');
-    let _data = _arr.split(",");
+    let data = arr.split(",");
 
-    _obj = {
-        country: _data[0]
-        , 2002: _data[1]
-        , 2003: _data[2]
-        , 2004: _data[3]
-        , 2005: _data[4]
-        , 2006: _data[5]
-        , 2007: _data[6]
-        , 2008: _data[7]
-        , 2009: _data[8]
-        , 2010: _data[9]
-        , 2011: _data[10]
-        , 2012: _data[11]
+    obj = {
+        country: data[0],
+        2002: data[1],
+        2003: data[2],
+        2004: data[3],
+        2005: data[4],
+        2006: data[5],
+        2007: data[6],
+        2008: data[7],
+        2009: data[8],
+        2010: data[9],
+        2011: data[10],
+        2012: data[11]
     };
 
-    _jsonData.push(_obj);
+    jsonData.push(obj);
 
 };
 
-for (let i = 1; i < _trLength; i++) {
-    _htmlToJSON(i);
+for (let i = 1; i < trLength; i++) {
+    htmlToJSON(i);
 }
-console.log("html to JSON", _jsonData);
+console.log("html to JSON", jsonData);
