@@ -102,12 +102,10 @@ let graphique2 = () => {
     canvas2.setAttribute("width", "600");
     document.getElementById("firstHeading").appendChild(canvas2);
 
-    let canvasC = document.getElementById("canvas2").getContext("2d");
-    let dataChart = [];
+    let canvasC2 = document.getElementById("canvas2").getContext("2d");
     let label = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
-    let i = 9;
-    let chart = new Chart(canvasC, {
-        type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+    let chart2 = new Chart(canvasC2, {
+        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
             datasets: [{
@@ -275,11 +273,9 @@ let graphique3 = () => {
     canvas3.setAttribute("width", "600");
     document.getElementById("firstHeading").appendChild(canvas3);
 
-    let canvasC = document.getElementById("canvas3").getContext("2d");
-    let dataChart = [];
+    let canvasC3 = document.getElementById("canvas3").getContext("2d");
     let label = ["2007-09", "2010-12"]
-    let i = 9;
-    let chart = new Chart(canvasC, {
+    let chart3 = new Chart(canvasC3, {
         type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
