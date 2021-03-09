@@ -42,8 +42,8 @@ let graphiqueChart = () => {
     };
     setInterval(graphiqueUpdateByTime, 2500);
 }
-
 graphiqueChart();
+
 
 
 
@@ -77,7 +77,7 @@ let _trLength = _table.getElementsByTagName("tr").length;
 let _jsonData = [];
 let _obj = {};
 
-let _htmlToJSON = function (index) {
+let _table1ToJSON = function (index) {
     let _tr = _table.getElementsByTagName("tr")[index];
     let _td = _tr.getElementsByTagName("td");
     let _arr = [].map.call(_td, function (td) {
@@ -104,7 +104,87 @@ let _htmlToJSON = function (index) {
 
 };
 
+let _table2 = document.getElementById("table2");
+let _trLength2 = _table2.getElementsByTagName("tr").length;
+let _jsonData2 = [];
+let _obj2 = {};
+let _table2ToJSON = function (index) {
+    let _tr2 = _table2.getElementsByTagName("tr")[index];
+    let _td2 = _tr2.getElementsByTagName("td");
+    let _arr2 = [].map.call(_td2, function (td) {
+        return td.innerHTML;
+    }).join(',');
+    let _data2 = _arr2.split(",");
+
+    _obj2 = {
+        country: _data2[0]
+        , 2002: _data2[1]
+        , 2003: _data2[2]
+        , 2004: _data2[3]
+        , 2005: _data2[4]
+        , 2006: _data2[5]
+        , 2007: _data2[6]
+        , 2008: _data2[7]
+        , 2009: _data2[8]
+        , 2010: _data2[9]
+        , 2011: _data2[10]
+        , 2012: _data2[11]
+    };
+
+    _jsonData2.push(_obj2);
+
+};
+
 for (let i = 1; i < _trLength; i++) {
-    _htmlToJSON(i);
+    _table1ToJSON(i);
+   
 }
-console.log("html to JSON", _jsonData);
+for (let i = 1; i < _trLength2; i++) {
+    
+    _table2ToJSON(i);
+}
+const table1 = document.getElementById("table1");
+
+document.getElementById("table2").textContent = JSON.stringify(_jsonData2);
+//textContent problem
+
+
+
+
+
+
+
+
+
+
+
+
+// let graphiqueTESTE = () => {
+//     let canvas2 = document.createElement("canvas");
+//     canvas2.setAttribute("id", "canvas2");
+//     canvas2.setAttribute("height", "300");
+//     canvas2.setAttribute("width", "600");
+//     document.getElementById("firstHeading").appendChild(canvas2);
+
+//     let canvasTest = document.getElementById("canvas2").getContext("2d");
+//     // let dataChart = [];
+//    // let label = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//     //let i = 9;
+//     let chart = new Chart(canvasTest, {
+       
+//         type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+//         data: {
+//             labels: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+//             datasets: [{
+//                 label: ["TESTE"],
+//                 data: JSON.stringify(_jsonData)
+//                 //borderColor: "red",
+//             }]
+//         }
+//     })
+//   //  data.forEach(ele => _jsonData.push(parseInt(ele[1])));
+//     //document.getElementById("table1").textContent = JSON.stringify(_jsonData);
+// }
+// console.log(_jsonData);
+// graphiqueTESTE();
+
