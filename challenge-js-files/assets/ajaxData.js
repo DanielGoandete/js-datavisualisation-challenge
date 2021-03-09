@@ -77,8 +77,8 @@ for (let j = 1; j < table.length; j++) {
 }
 
 
-console.log(Object.keys(data2)[1]);
-console.log(Object.values(data2)[1]);
+// console.log(Object.keys(data2)[1]);
+// console.log(Object.values(data2)[1]);
 
 
 
