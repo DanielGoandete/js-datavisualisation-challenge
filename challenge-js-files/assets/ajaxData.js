@@ -63,7 +63,6 @@ function tableToJson(table) {
 let year = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
 let labelTable = document.getElementById("table1");
 let data2 = [];
-let data3 = [];
 let table = Array.from(tableToJson(labelTable));
 
 for (let j = 1; j < table.length; j++) {
@@ -73,6 +72,20 @@ for (let j = 1; j < table.length; j++) {
             sum.push(parseFloat(table[j][i]));
         }
     } data2[table[j][0]] = sum;
+}
+
+//=================================
+let labelTable3 = document.getElementById("table2");
+let data3 = [];
+let table3 = Array.from(tableToJson(labelTable3));
+
+for (let j = 1; j < table3.length; j++) {
+    let sum3 = [];
+    for (let i = 1; i < table3[j].length; i++) {
+        if (parseFloat(table3[j][i])) {
+            sum3.push(parseFloat(table3[j][i]));
+        }
+    } data3[table[j][0]] = sum3;
 }
 
 
@@ -166,144 +179,16 @@ let graphique2 = () => {
                 data: Object.values(data2)[16]
             },
             {
-                label: Object.keys(data2)[0],
-                data: Object.values(data2)[0]
-            },
-            {
-                label: Object.keys(data2)[0],
-                data: Object.values(data2)[0]
-            },
-            {
-                label: Object.keys(data2)[0],
-                data: Object.values(data2)[0]
-            }
-            ]
-        }
-    })
-}
-graphique2();
-
-
-//Graphique n°3
-let graphique3 = () => {
-    let canvas3 = document.createElement("canvas");
-    canvas3.setAttribute("id", "canvas3");
-    canvas3.setAttribute("height", "300");
-    canvas3.setAttribute("width", "600");
-    document.getElementById("firstHeading").appendChild(canvas3);
-
-    let canvasC = document.getElementById("canvas3").getContext("2d");
-    let dataChart = [];
-    let label = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
-    let i = 9;
-    let chart = new Chart(canvasC, {
-        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
-        data: {
-            labels: label,
-            datasets: [{
-                label: Object.keys(data3)[0],
-                data: Object.values(data3)[0],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[1],
-                data: Object.values(data2)[1],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[2],
-                data: Object.values(data2)[2],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[3],
-                data: Object.values(data2)[3],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[4],
-                data: Object.values(data2)[4],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[5],
-                data: Object.values(data2)[5],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[6],
-                data: Object.values(data2)[6],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[7],
-                data: Object.values(data2)[7],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[8],
-                data: Object.values(data2)[8],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[9],
-                data: Object.values(data2)[9],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[10],
-                data: Object.values(data2)[10],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[11],
-                data: Object.values(data2)[11],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[12],
-                data: Object.values(data2)[12],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[13],
-                data: Object.values(data2)[13],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[14],
-                data: Object.values(data2)[14],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[15],
-                data: Object.values(data2)[15],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[16],
-                data: Object.values(data2)[16],
-                borderColor: "red",
-            },
-            {
                 label: Object.keys(data2)[17],
-                data: Object.values(data2)[17],
-                borderColor: "red",
-            },
-            {
-                label: Object.keys(data2)[18],
-                data: Object.values(data2)[18],
-                borderColor: "red",
+                data: Object.values(data2)[17]
             },
             {
                 label: Object.keys(data2)[19],
-                data: Object.values(data2)[19],
-                borderColor: "red",
+                data: Object.values(data2)[19]
             },
             {
                 label: Object.keys(data2)[20],
-                data: Object.values(data2)[20],
-                borderColor: "red",
+                data: Object.values(data2)[20]
             },
             {
                 label: Object.keys(data2)[21],
@@ -369,8 +254,205 @@ let graphique3 = () => {
                 label: Object.keys(data2)[33],
                 data: Object.values(data2)[33],
                 borderColor: "red",
-            }]
+            },
+            {
+                label: Object.keys(data2)[34],
+                data: Object.values(data2)[34],
+                borderColor: "red",
+            }
+            ]
+        }
+    })
+}
+graphique2();
 
+
+//Graphique n°3
+let graphique3 = () => {
+    let canvas3 = document.createElement("canvas");
+    canvas3.setAttribute("id", "canvas3");
+    canvas3.setAttribute("height", "300");
+    canvas3.setAttribute("width", "600");
+    document.getElementById("firstHeading").appendChild(canvas3);
+
+    let canvasC = document.getElementById("canvas3").getContext("2d");
+    let dataChart = [];
+    let label = ["2007-09", "2010-12"]
+    let i = 9;
+    let chart = new Chart(canvasC, {
+        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+        data: {
+            labels: label,
+            datasets: [{
+                label: Object.keys(data3)[0],
+                data: Object.values(data3)[0],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[1],
+                data: Object.values(data3)[1],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[2],
+                data: Object.values(data3)[2],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[3],
+                data: Object.values(data3)[3],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[4],
+                data: Object.values(data3)[4],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[5],
+                data: Object.values(data3)[5],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[6],
+                data: Object.values(data3)[6],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[7],
+                data: Object.values(data3)[7],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[8],
+                data: Object.values(data3)[8],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[9],
+                data: Object.values(data3)[9],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[10],
+                data: Object.values(data3)[10],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[11],
+                data: Object.values(data3)[11],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[12],
+                data: Object.values(data3)[12],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[13],
+                data: Object.values(data3)[13],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[14],
+                data: Object.values(data3)[14],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[15],
+                data: Object.values(data3)[15],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[16],
+                data: Object.values(data3)[16],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[17],
+                data: Object.values(data3)[17],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[18],
+                data: Object.values(data3)[18],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[19],
+                data: Object.values(data3)[19],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[20],
+                data: Object.values(data3)[20],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[21],
+                data: Object.values(data3)[21],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[22],
+                data: Object.values(data3)[22],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[23],
+                data: Object.values(data3)[23],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[24],
+                data: Object.values(data3)[24],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[25],
+                data: Object.values(data3)[25],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[26],
+                data: Object.values(data3)[26],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[27],
+                data: Object.values(data3)[27],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[28],
+                data: Object.values(data3)[28],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[29],
+                data: Object.values(data3)[29],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[30],
+                data: Object.values(data3)[30],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[31],
+                data: Object.values(data3)[31],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[32],
+                data: Object.values(data3)[32],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data3)[33],
+                data: Object.values(data3)[33],
+                borderColor: "red",
+            }]
 
         }
     })
