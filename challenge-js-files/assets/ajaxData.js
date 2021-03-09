@@ -29,7 +29,7 @@ let graphiqueChart = () => {
         i++;
         label.push(i);
 
-        
+
         fetch('https://canvasjs.com/services/data/datapoints.php')
             .then(res => {
                 return res.json()
@@ -46,44 +46,43 @@ let graphiqueChart = () => {
 graphiqueChart();
 
 
-    
-    // let table = document.getElementById("table1");
-    // var j = [].reduce.call(table.rows, function(res, row) {
-    //     res[row.cells[0].textContent.slice(0,-1)] = row.cells[1].textContent;
-    //     return res
-    // }, {});
-    
-    // document.querySelector("pre").textContent = JSON.stringify(j, null, 2);
 
-    function tableToJSON() {
+// let table = document.getElementById("table1");
+// var j = [].reduce.call(table.rows, function(res, row) {
+//     res[row.cells[0].textContent.slice(0,-1)] = row.cells[1].textContent;
+//     return res
+// }, {});
 
-        let table = document.getElementById("table1");
-        var obj = {};
-        var row, rows = table.rows;
-        for (var i=0, iLen=rows.length; i<iLen; i++) {
-          row = rows[i];
-          obj[row.cells[0].textContent] = row.cells[1].textContent
+// document.querySelector("pre").textContent = JSON.stringify(j, null, 2);
+
+
+/*function tableToJSON(x) {
+    let x;
+    let obj = {};
+    let row, rows = table.rows;
+    for (let i = 0; i <  rows.length; i++) {
+        row = rows[i];
+        obj[row.cells[0].textContent] = row.cells[1].textContent;
+    }
+    document.querySelector("x").textContent = JSON.stringify(obj);
+    return JSON.stringify(obj);
+}
+
+tableToJSON();
+Table1
+Table2*/
+
+function tableToJson() {
+    let table = document.getElementById("table1");
+    var data = [];
+    for (var i = 1; i < table.rows.length; i++) {
+        var tableRow = table.rows[i];
+        var rowData = [];
+        for (var j = 0; j < tableRow.cells.length; j++) {
+            rowData.push(tableRow.cells[j].innerHTML);;
         }
-        
-        document.querySelector("table").textContent = JSON.stringify(obj);
-        return JSON.stringify(obj);
-      }
-      ableToJSON()
-      
-
-      function tableToJSON1() {
-        
-        let table = document.getElementById("table2");
-        var obj = {};
-        var row, rows = table.rows;
-        for (var i=0, iLen=rows.length; i<iLen; i++) {
-          row = rows[i];
-          obj[row.cells[0].textContent] = row.cells[1].textContent
-        }
-        
-        document.querySelector("table").textContent = JSON.stringify(obj);
-        return JSON.stringify(obj);
-      }
-      
-      tableToJSON1()
-      t
+        data.push(rowData);
+    }
+    return data;
+}
+console.log(tableToJson());
