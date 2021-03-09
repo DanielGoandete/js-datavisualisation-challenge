@@ -129,7 +129,7 @@ let graphique2 = () => {
                 borderColor: "blue",
             },
             {
-                label: Object.keys(data3)[1],
+                label: Object.keys(data3)[2],
                 data: Object.values(data3)[2],
                 borderColor: "blue",
             }]
