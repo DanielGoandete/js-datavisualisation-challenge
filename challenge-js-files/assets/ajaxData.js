@@ -276,7 +276,7 @@ let graphique3 = () => {
     let canvasC3 = document.getElementById("canvas3").getContext("2d");
     let label = ["2007-09", "2010-12"]
     let chart3 = new Chart(canvasC3, {
-        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+        type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
             datasets: [{
