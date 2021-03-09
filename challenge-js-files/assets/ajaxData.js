@@ -72,7 +72,7 @@ tableToJSON();
 Table1
 Table2*/
 
-function tableToJson() {
+/*function tableToJson() {
     let table = document.getElementById("table1");
     var data = [];
     for (var i = 1; i < table.rows.length; i++) {
@@ -85,4 +85,32 @@ function tableToJson() {
     }
     return data;
 }
-console.log(tableToJson());
+console.log(tableToJson());*/
+
+let _table = document.getElementById("table1");
+let _trLength = _table.getElementsByTagName("tr").length;
+let _jsonData = [];
+let _obj = {};
+
+let _htmlToJSON = function (index) {
+    let _tr = _table.getElementsByTagName("tr")[index];
+    let _td = _tr.getElementsByTagName("td");
+    let _arr = [].map.call(_td, function (td) {
+        return td.innerHTML;
+    }).join(',');
+    let _data = _arr.split(",");
+
+    _obj = {
+        column1: _data[0]
+        , column2: _data[1]
+        , column3: _data[2]
+    };
+
+    _jsonData.push(_obj);
+
+};
+
+for (let i = 1; i < _trLength; i++) {
+    _htmlToJSON(i);
+}
+console.log("html to JSON", _jsonData);
