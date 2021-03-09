@@ -163,50 +163,23 @@ function tableToJson(table) {
 let year = [2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012]
 let dataTable = {};
 let labelTable  = document.getElementById("table1");
-let labelToTable = [];
 let country = [];
+let valueCountry = [],[];
 let table = Array.from(tableToJson(labelTable));
-//table = table.slice(1,2)
 for(let i =1;i < table.length; i++){
-    // if(){
-    
-    // }
-     
-   
+    for(let g=1; g < table[i].length; g++){
+
+        valueCountry[g].push(table[g][1]);
+    }
+
+    country.push(table[i][0]);
 }
 
 console.log(country);
+console.log(valueCountry);
+
 console.log(table);
 
 
 
-
-// let graphiqueTESTE = () => {
-//     let canvas2 = document.createElement("canvas");
-//     canvas2.setAttribute("id", "canvas2");
-//     canvas2.setAttribute("height", "300");
-//     canvas2.setAttribute("width", "600");
-//     document.getElementById("firstHeading").appendChild(canvas2);
-//     let table = [];
-//     let canvasTest = document.getElementById("canvas2").getContext("2d");
-//     // let dataChart = [];
-//    // let label = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-//     //let i = 9;
-//     let chart = new Chart(canvasTest, {
-       
-//         type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
-//         data: {
-//             labels: JSON.stringify(_jsonData),
-//             datasets: [{
-//                 label: ["TESTE"],
-//                 data: JSON.stringify(_jsonData)
-//                 //borderColor: "red",
-//             }]
-//         }
-//     })
-//   //  data.forEach(ele => _jsonData.push(parseInt(ele[1])));
-//     //document.getElementById("table1").textContent = JSON.stringify(_jsonData);
-// }
-// console.log(_jsonData);
-// graphiqueTESTE();
 
