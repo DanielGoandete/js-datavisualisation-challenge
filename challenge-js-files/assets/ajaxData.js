@@ -100,7 +100,7 @@ let graphique2 = () => {
     canvas2.setAttribute("id", "canvas2");
     canvas2.setAttribute("height", "300");
     canvas2.setAttribute("width", "600");
-    document.getElementById("firstHeading").appendChild(canvas2);
+    document.querySelector("h3").appendChild(canvas2);
 
     let canvasC2 = document.getElementById("canvas2").getContext("2d");
     let label = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
