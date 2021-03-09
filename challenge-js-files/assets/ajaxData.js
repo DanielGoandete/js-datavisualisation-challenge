@@ -13,7 +13,7 @@ let graphiqueChart = () => {
     let label = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     let i = 9;
     let chart = new Chart(canvas, {
-        type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
             datasets: [{
@@ -109,6 +109,7 @@ let _trLength2 = _table2.getElementsByTagName("tr").length;
 let _jsonData2 = [];
 let _obj2 = {};
 let _table2ToJSON = function (index) {
+    
     let _tr2 = _table2.getElementsByTagName("tr")[index];
     let _td2 = _tr2.getElementsByTagName("td");
     let _arr2 = [].map.call(_td2, function (td) {
@@ -143,18 +144,39 @@ for (let i = 1; i < _trLength2; i++) {
     
     _table2ToJSON(i);
 }
-const table1 = document.getElementById("table1");
+//document.getElementById("table1").textContent = JSON.stringify(_jsonData);
+//document.getElementById("table2").textContent = JSON.stringify(_jsonData2);
+function tableToJson(table) {
+    let data = [];
+    for (i = 1; i < table.rows.length; i++) {
+        let tableRow = table.rows[i];
+        let rowData = [];
+        for (j = 1; j < tableRow.cells.length; j++) {
+            rowData.push(tableRow.cells[j].innerHTML);;
+        }
+        data.push(rowData);
+    }
+    return data;
+}
 
-document.getElementById("table2").textContent = JSON.stringify(_jsonData2);
-//textContent problem
 
+let year = [2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012]
+let dataTable = {};
+let labelTable  = document.getElementById("table1");
+let labelToTable = [];
+let country = [];
+let table = Array.from(tableToJson(labelTable));
+//table = table.slice(1,2)
+for(let i =1;i < table.length; i++){
+    // if(){
+    
+    // }
+     
+   
+}
 
-
-
-
-
-
-
+console.log(country);
+console.log(table);
 
 
 
@@ -165,7 +187,7 @@ document.getElementById("table2").textContent = JSON.stringify(_jsonData2);
 //     canvas2.setAttribute("height", "300");
 //     canvas2.setAttribute("width", "600");
 //     document.getElementById("firstHeading").appendChild(canvas2);
-
+//     let table = [];
 //     let canvasTest = document.getElementById("canvas2").getContext("2d");
 //     // let dataChart = [];
 //    // let label = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -174,7 +196,7 @@ document.getElementById("table2").textContent = JSON.stringify(_jsonData2);
        
 //         type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
 //         data: {
-//             labels: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+//             labels: JSON.stringify(_jsonData),
 //             datasets: [{
 //                 label: ["TESTE"],
 //                 data: JSON.stringify(_jsonData)
