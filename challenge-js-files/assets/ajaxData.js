@@ -44,3 +44,46 @@ let graphiqueChart = () => {
 }
 
 graphiqueChart();
+
+
+    
+    // let table = document.getElementById("table1");
+    // var j = [].reduce.call(table.rows, function(res, row) {
+    //     res[row.cells[0].textContent.slice(0,-1)] = row.cells[1].textContent;
+    //     return res
+    // }, {});
+    
+    // document.querySelector("pre").textContent = JSON.stringify(j, null, 2);
+
+    function tableToJSON() {
+
+        let table = document.getElementById("table1");
+        var obj = {};
+        var row, rows = table.rows;
+        for (var i=0, iLen=rows.length; i<iLen; i++) {
+          row = rows[i];
+          obj[row.cells[0].textContent] = row.cells[1].textContent
+        }
+        
+        document.querySelector("table").textContent = JSON.stringify(obj);
+        return JSON.stringify(obj);
+      }
+      ableToJSON()
+      
+
+      function tableToJSON1() {
+        
+        let table = document.getElementById("table2");
+        var obj = {};
+        var row, rows = table.rows;
+        for (var i=0, iLen=rows.length; i<iLen; i++) {
+          row = rows[i];
+          obj[row.cells[0].textContent] = row.cells[1].textContent
+        }
+        
+        document.querySelector("table").textContent = JSON.stringify(obj);
+        return JSON.stringify(obj);
+      }
+      
+      tableToJSON1()
+      t
