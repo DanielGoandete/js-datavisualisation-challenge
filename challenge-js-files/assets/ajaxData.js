@@ -60,18 +60,18 @@ function tableToJson(table) {
 }
 
 
-let year = [2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012]
-let labelTable  = document.getElementById("table1");
+let year = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
+let labelTable = document.getElementById("table1");
 let data2 = [];
 let table = Array.from(tableToJson(labelTable));
 
-for (let j = 1; j < table.length; j++) { 
-    let sum = []; 
+for (let j = 1; j < table.length; j++) {
+    let sum = [];
     for (let i = 1; i < table[j].length; i++) {
-         if (parseFloat(table[j][i])) {
-              sum.push(parseFloat(table[j][i])); 
-        } 
-    } data2[table[j][0]] = sum; 
+        if (parseFloat(table[j][i])) {
+            sum.push(parseFloat(table[j][i]));
+        }
+    } data2[table[j][0]] = sum;
 }
 
 
@@ -125,7 +125,34 @@ let graphique2 = () => {
                 label: Object.keys(data2)[1],
                 data: Object.values(data2)[1],
                 borderColor: "red",
-            }]
+            },
+            {
+                label: Object.keys(data2)[2],
+                data: Object.values(data2)[2],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[1],
+                data: Object.values(data2)[1],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[1],
+                data: Object.values(data2)[1],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[1],
+                data: Object.values(data2)[1],
+                borderColor: "red",
+            },
+            {
+                label: Object.keys(data2)[1],
+                data: Object.values(data2)[1],
+                borderColor: "red",
+            },]
+
+
         }
     })
 }
