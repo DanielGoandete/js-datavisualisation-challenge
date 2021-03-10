@@ -103,9 +103,9 @@ let graphique2 = () => {
     document.querySelector("h3").appendChild(canvas2);
 
     let canvasC2 = document.getElementById("canvas2").getContext("2d");
-    let label = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
+    let label = ["2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
     let chart2 = new Chart(canvasC2, {
-        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+        type: "line",//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
             datasets: [{
@@ -271,7 +271,7 @@ let graphique3 = () => {
     canvas3.setAttribute("id", "canvas3");
     canvas3.setAttribute("height", "300");
     canvas3.setAttribute("width", "600");
-    document.getElementById("firstHeading").appendChild(canvas3);
+    document.querySelector("#Homicides").appendChild(canvas3);
 
     let canvasC3 = document.getElementById("canvas3").getContext("2d");
     let label = ["2007-09", "2010-12"]
