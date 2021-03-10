@@ -268,10 +268,17 @@ graphique2();
 //Graphique n°3
 let graphique3 = () => {
     let canvas3 = document.createElement("canvas");
+    let div = document.createElement("div");
+    div.setAttribute("id", "div");
     canvas3.setAttribute("id", "canvas3");
     canvas3.setAttribute("height", "300");
     canvas3.setAttribute("width", "600");
+<<<<<<< Updated upstream
     document.querySelector("#Homicides").appendChild(canvas3);
+=======
+    document.getElementById("Homicides").appendChild(div);
+    document.getElementById("div").appendChild(canvas3);
+>>>>>>> Stashed changes
 
     let canvasC3 = document.getElementById("canvas3").getContext("2d");
     let label = ["2007-09", "2010-12"]
