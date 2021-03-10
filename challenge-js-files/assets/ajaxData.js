@@ -1,3 +1,17 @@
+//Color
+let randomColor = () => {
+    let color = "";
+    for (let i = 0; i < 3; i++) {
+        let sub = Math.floor(Math.random() * 256).toString(16);
+        color += (sub.length == 1 ? "0" + sub : sub);
+    }
+    return "#" + color;
+}
+
+console.log(randomColor());
+
+
+//AJAX Chart
 Chart.defaults.global.defaultFontSize = 11;
 Chart.defaults.global.defaultFontColor = "#000";
 
@@ -19,7 +33,7 @@ let graphiqueChart = () => {
             datasets: [{
                 label: ["Crime Statistics"],
                 data: dataChart,
-                borderColor: "#4B0082"
+                borderColor: randomColor()
             }]
         }
     })
@@ -92,18 +106,6 @@ for (let j = 1; j < table3.length; j++) {
 }
 
 
-
-//Color
-let randomColor = () => {
-    let color = "";
-    for (let i = 0; i < 3; i++) {
-        let sub = Math.floor(Math.random() * 256).toString(16);
-        color += (sub.length == 1 ? "0" + sub : sub);
-    }
-    return "#" + color;
-}
-
-console.log(randomColor());
 
 // console.log(Object.keys(data2)[1]);
 // console.log(Object.values(data2)[1]);
