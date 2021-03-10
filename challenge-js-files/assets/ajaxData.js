@@ -103,9 +103,9 @@ let graphique2 = () => {
     document.querySelector("h3").appendChild(canvas2);
 
     let canvasC2 = document.getElementById("canvas2").getContext("2d");
-    let label = ["2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
-    let chart2 = new Chart(canvasC2, {
-        type: "line",//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
+    let label = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
+    new Chart(canvasC2, {
+        type: 'line',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
             datasets: [{
@@ -267,18 +267,17 @@ graphique2();
 
 //Graphique n°3
 let graphique3 = () => {
-    let canvas3 = document.createElement("canvas");
-    let div = document.createElement("div");
-    div.setAttribute("id", "div");
-    canvas3.setAttribute("id", "canvas3");
-    canvas3.setAttribute("height", "300");
-    canvas3.setAttribute("width", "600");
-    document.getElementById("Homicides").appendChild(div);
-    document.getElementById("div").appendChild(canvas3);
-
+        let canvas3 = document.createElement("canvas");
+        let div = document.createElement("div");
+        div.setAttribute("id", "div");
+        canvas3.setAttribute("id", "canvas3");
+        canvas3.setAttribute("height", "300");
+        canvas3.setAttribute("width", "600");
+        document.getElementById("Homicides").appendChild(div);
+        document.getElementById("div").appendChild(canvas3);
     let canvasC3 = document.getElementById("canvas3").getContext("2d");
     let label = ["2007-09", "2010-12"]
-    let chart3 = new Chart(canvasC3, {
+    new Chart(canvasC3, {
         type: 'bar',//bar, horizontalBar, pie, line , doughnut , radar ,polarArea
         data: {
             labels: label,
