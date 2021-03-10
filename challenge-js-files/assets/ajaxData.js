@@ -114,8 +114,8 @@ console.log(randomColor());
 let graphique2 = () => {
     let canvas2 = document.createElement("canvas");
     canvas2.setAttribute("id", "canvas2");
-    canvas2.setAttribute("height", "300");
-    canvas2.setAttribute("width", "600");
+    canvas2.setAttribute("height", "900");
+    canvas2.setAttribute("width", "1000");
     document.querySelector("h3").appendChild(canvas2);
 
     let canvasC2 = document.getElementById("canvas2").getContext("2d");
