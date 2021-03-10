@@ -1,4 +1,4 @@
-Chart.defaults.global.defaultFontSize = 16;
+Chart.defaults.global.defaultFontSize = 11;
 Chart.defaults.global.defaultFontColor = "#000";
 
 let graphiqueChart = () => {
@@ -17,9 +17,9 @@ let graphiqueChart = () => {
         data: {
             labels: label,
             datasets: [{
-                label: ["Crime Statistics' Chart"],
+                label: ["Crime Statistics"],
                 data: dataChart,
-                borderColor: "red",
+                borderColor: "#4B0082"
             }]
         }
     })
@@ -93,7 +93,7 @@ for (let j = 1; j < table3.length; j++) {
 
 
 
-//color
+//Color
 let randomColor = () => {
     let color = "";
     for (let i = 0; i < 3; i++) {
